@@ -1,0 +1,16 @@
+def prefix_to_postfix(expr):
+    stack = []
+    for i in reversed(expr):
+        if i.isnumeric():
+            stack.append(i)
+        else:
+            op1 = stack.pop()
+            op2 = stack.pop()
+            stack.append(op1 + " " + op2 + " " + i)
+    return stack.pop()
+
+while True:
+    expr = input()
+    if expr == "0":
+        break
+    print(prefix_to_postfix(expr.split()))
