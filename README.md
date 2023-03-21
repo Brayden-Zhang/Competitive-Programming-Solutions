@@ -1,1 +1,1 @@
-# CCC-Solutions
+# Competitive Programming Solutions
